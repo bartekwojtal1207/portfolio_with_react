@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+section.welcome {
+  color: $font-silver-color;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0e1628;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+
+.welcome-container {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+
+  }
+  .js-hidden-text {
+    display: none;
+  }
+  .js-show-text {
+    height: 60px;
+  }
+  .js-show-text-hover {
+    color: #FAFAFA;
+    text-shadow: 1px 0px 5px #FAFAFA;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .welcome-button {
+    width: 162px;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    position: relative;
+    color: $font-silver-color;
+    border: 1px solid $font-silver-color;
+    border-radius: $border-base;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    &:before {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 86%;
+      position: absolute;
+      top: 7%;
+      left: 0%;
+      opacity: 0;
+      background: white;
+      box-shadow: 0 0 15px 3px white;
+      -webkit-transform: skewX(-20deg);
+      -moz-transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+      -o-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+    }
+    &:active {
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-transition: box-shadow 0.2s ease-in;
+      -moz-transition: box-shadow 0.2s ease-in;
+      transition: box-shadow 0.2s ease-in;
+    }
+    &:hover {
+      color: white;
+      box-shadow: 0 0 30px 0 $font-silver-color;
+      background-color: #FAFAFA;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
