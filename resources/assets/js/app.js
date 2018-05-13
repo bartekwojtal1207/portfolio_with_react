@@ -7,9 +7,10 @@
 require('./jquery-3.3.1.min');
 
 require('./bootstrap');
+
 require('./particles');
 
-import Example from './components/ButtonComponenent';
+import Example from './components/MessageComponenent';
 /**
  * view includes
  * first welcome
