@@ -50,30 +50,23 @@ $(function () {
         "retina_detect": true
     });
 
-    var showText = function (target, message, index, interval) {
-        if (index < message.length) {
-        $(target).append(message[index++]);
-        setTimeout(function () { showText(target, message, index, interval); }, interval);
-    }
+    const mainWelcomeBtn = $('.welcome-button'),
+        elementToAnimate = $('.js-show-text');
 
-};
-
-var textToAnimate = 'Bartosz Wojtal::develepor'
-
-
-setTimeout(function () {
-    showText("#msg", textToAnimate, 0, 500);
-},1000);
-
-var mainWelcomeBtn = $('.welcome-button'),
-    elementToAnimate = $('.js-show-text');
     mainWelcomeBtn.mouseenter(function () {
-    elementToAnimate.addClass('js-show-text-hover')
-});
+        elementToAnimate.addClass('js-show-text-hover')
+    });
+
     mainWelcomeBtn.mouseleave(function () {
-    elementToAnimate.removeClass('js-show-text-hover')
+        elementToAnimate.removeClass('js-show-text-hover')
+    });
+    
+   const showBtn = function() {
+       $(mainWelcomeBtn).show("slow")
+   };
 
-});
-
+    setTimeout(function () {
+        showBtn();
+    },11000);
 
 });

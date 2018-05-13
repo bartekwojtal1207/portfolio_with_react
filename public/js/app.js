@@ -13986,7 +13986,7 @@ module.exports = __webpack_require__(63);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ButtonComponenent__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_MessageComponenent__ = __webpack_require__(45);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -39905,39 +39905,63 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Example = function (_Component) {
-    _inherits(Example, _Component);
+var Message = function (_React$Component) {
+    _inherits(Message, _React$Component);
 
-    function Example() {
-        _classCallCheck(this, Example);
+    function Message(props) {
+        _classCallCheck(this, Message);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));
+
+        _this.state = {
+            messageText: 'bartosz wojtal.develepor',
+            left: -1000 };
+
+        return _this;
     }
 
-    _createClass(Example, [{
+    _createClass(Message, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.timerID = setInterval(function () {
+                return _this2.setPositionText();
+            }, 10);
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var leftPosition = this.state.left;
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
+                { className: 'col-md-12 welcome-container' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h1',
-                    null,
-                    'Cool, it\'s working'
+                    'h3',
+                    { style: { left: leftPosition, position: "relative" }, className: this.state.hover ? "js-show-text-hover" : "js-show-text", id: 'msg' },
+                    this.state.messageText
                 )
             );
         }
+    }, {
+        key: 'setPositionText',
+        value: function setPositionText() {
+            var left = this.state.left;
+            left++;
+            this.state.left < 0 ? this.setState({ left: left }) : false;
+        }
     }]);
 
-    return Example;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+    return Message;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Example);
+/* unused harmony default export */ var _unused_webpack_default_export = (Message);
 
 // We only want to try to render our component on pages that have a div with an ID
 // of "example"; otherwise, we will see an error in our console
-if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('message-container')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Message, null), document.getElementById('message-container'));
 }
 
 /***/ }),
@@ -58743,29 +58767,24 @@ $(function () {
         "retina_detect": true
     });
 
-    var showText = function showText(target, message, index, interval) {
-        if (index < message.length) {
-            $(target).append(message[index++]);
-            setTimeout(function () {
-                showText(target, message, index, interval);
-            }, interval);
-        }
-    };
-
-    var textToAnimate = 'Bartosz Wojtal::develepor';
-
-    setTimeout(function () {
-        showText("#msg", textToAnimate, 0, 500);
-    }, 1000);
-
     var mainWelcomeBtn = $('.welcome-button'),
         elementToAnimate = $('.js-show-text');
+
     mainWelcomeBtn.mouseenter(function () {
         elementToAnimate.addClass('js-show-text-hover');
     });
+
     mainWelcomeBtn.mouseleave(function () {
         elementToAnimate.removeClass('js-show-text-hover');
     });
+
+    var showBtn = function showBtn() {
+        $(mainWelcomeBtn).show("slow");
+    };
+
+    setTimeout(function () {
+        showBtn();
+    }, 11000);
 });
 
 /***/ }),

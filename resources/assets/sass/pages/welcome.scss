@@ -26,6 +26,7 @@ section.welcome {
     background-size: cover;
     background-position: 50% 50%;
   }
+
 }
 
 .welcome-container {
@@ -34,17 +35,23 @@ section.welcome {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  font-family: $font-family-space;
+  font-size: 10vw;
   h3 {
-    font-size: 50px;
-    margin-bottom: 50px;
-    font-weight: 600;
-
+    font-size: 5vw;
+    letter-spacing: 1px;
+    margin-top: 4em;
+    margin-bottom: 20px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
   }
   .js-hidden-text {
     display: none;
-  }
-  .js-show-text {
-    height: 60px;
   }
   .js-show-text-hover {
     color: #FAFAFA;
@@ -58,7 +65,7 @@ section.welcome {
     font-size: 20px;
     text-align: center;
     height: 50px;
-    display: block;
+    display: none;
     line-height: 50px;
     padding: 0;
     text-decoration: none;

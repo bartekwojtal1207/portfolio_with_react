@@ -4,8 +4,15 @@ $body-bg: #000;
 
 // Typography
 $font-family-sans-serif: "Helvetica Neue","Helvetica","Arial",sans-serif;
+$font-family-space: 'Space Mono', monospace;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $font-silver-color: #C0C0C0;
 // style
 $border-base : 5px;
+// RWD
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 991px;
+$screen-lg: 1200px;
+$screen-xl: 1900px;
