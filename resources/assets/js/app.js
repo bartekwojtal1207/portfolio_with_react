@@ -11,6 +11,12 @@ require('./bootstrap');
 require('./particles');
 
 import Example from './components/MessageComponenent';
+
+import Navbar from './components/Navbar';
+
+import Navigation from './components/Navigation';
+
+
 /**
  * view includes
  * first welcome

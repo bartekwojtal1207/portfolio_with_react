@@ -12,10 +12,8 @@ class Message extends React.Component {
     }
 
     componentDidMount() {
-        this.timerID = setInterval(
-            () => this.setPositionText(),
-            10
-        );
+        this.timerID = setInterval(() => this.setPositionText(),
+            10);
     }
 
     render() {
