@@ -40,5 +40,13 @@
     "webpack": "^3.11.0"
   },
   "author": "bartek wojtal",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartekwojtal1207/portfolio_with_react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bartekwojtal1207/portfolio_with_react/issues"
+  },
+  "homepage": "https://github.com/bartekwojtal1207/portfolio_with_react#readme"
 }

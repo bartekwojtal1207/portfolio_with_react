@@ -10,7 +10,9 @@ require('./bootstrap');
 
 require('./particles');
 
-import Example from './components/MessageComponenent';
+require('./welcome');
+
+import Message from './components/MessageComponenent';
 
 import Navbar from './components/Navbar';
 
@@ -22,5 +24,4 @@ import Navigation from './components/Navigation';
  * first welcome
  */
 
-require('./welcome');
 

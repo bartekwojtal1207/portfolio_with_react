@@ -20,7 +20,7 @@ class Message extends React.Component {
         const leftPosition = this.state.left;
 
         return (
-            <div className="col-md-12 welcome-container">
+            <div className="welcome-container">
                 <h3 style={{left: leftPosition, position: "relative"}} className={this.state.hover ? "js-show-text-hover" : "js-show-text"} id="msg">{this.state.messageText}</h3>
             </div>
         );
@@ -35,8 +35,7 @@ class Message extends React.Component {
 
 export default Message;
 
-// We only want to try to render our component on pages that have a div with an ID
-// of "example"; otherwise, we will see an error in our console
+
 if (document.getElementById('message-container')) {
     ReactDOM.render(<Message />, document.getElementById('message-container'));
 }

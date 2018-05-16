@@ -19,4 +19,7 @@ class Navigation extends React.Component {
 
 export default Navigation;
 
-ReactDOM.render(<Navigation />, document.getElementById("navigation"));
+
+if (document.getElementById('navigation')) {
+    ReactDOM.render(<Navigation/>, document.getElementById("navigation"));
+}
